@@ -51,7 +51,7 @@ function handleChange(e){
 function handleSubmit(e){
     e.preventDefault()
     dispatch(postForm(input))
-    alert("hola")
+    alert("hola"+input)
     setInput({
         name : "",
         lastname : "",

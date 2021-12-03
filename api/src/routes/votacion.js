@@ -12,22 +12,22 @@ router.get("/", async function( req, res) {
 
 router.post("/", async function( req, res) {
 
-        const { value, famosoId,
-                usuarioId, } = req.body;
+        const { votacion, famosoId,
+            usuarioId } = req.body;
             
                 try {
                     const formFamosos = await Famoso_usuario.create({
-                        value,
+                        votacion,
                         famosoId,
-                        usuarioId,
+                        usuarioId
                     });
               
                     res.json(formFamosos);
-                    console.log(formFamosos);
+                    console.log("holaa",formFamosos);
                     console.log(Famoso_usuario);
                     
                 } catch (err) {
-                    res.send("hola, hay un error")
+                    res.send("hola, hay un  en el back: " + err);
                     console.log("hola a todos", err);
                 }
 });

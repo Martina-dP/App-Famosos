@@ -25,11 +25,10 @@ export function postForm (input) {
     }
 }
 
-
-export function postFamosos (input) {
+export function postFamosos (resultado) {
+    console.log("RESULTADO",resultado)
     return async function(dispatch){
-        var json = await axios.post("http://localhost:3001/votaciones", input)
-        console.log(json)
+        var json = await axios.post("http://localhost:3001/votaciones", resultado)
         return dispatch({
             type : "POST_FAMOSOS",
             payload : json.data

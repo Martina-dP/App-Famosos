@@ -4,7 +4,9 @@ import {
 
 import Home from './componentes/Home/Home';
 import Landing from './componentes/Landing/Landing'
-import Form from './componentes/Form/Form';
+import Form from './componentes/FormUsuario/FormUsuario';
+import FormVotacion from './componentes/FormVotacion/FormVotacion';
+import Otro from './Otro/otro';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route exact path = "/" element = {<Landing/>} />
         <Route exact path = "/Form" element = {<Form/>} />
         <Route exact path = "/home" element = {<Home/>} />
+        {/* <Route exact path = "/votacion" element = {<FormVotacion/>} /> */}
+        <Route path = "/otro" element = {<Otro/>} />
       </Routes>
   </BrowserRouter>
   );

@@ -16,29 +16,29 @@ try{
 
 router.post("/", async function( req, res) {
 
-        const {
-            id,
-                name,
-                lastname,
-                email,
-                edad,
-                trabajo } = req.body;
-        
-            try {
-                const formUsuarios = await Usuario.create({
-                    id,
-                        name,
-                        lastname,
-                        email,
-                        edad,
-                        trabajo,
-                });
-          
-                res.json(formUsuarios);
-                
-            } catch (err) {
-                res.send("hola, hay un error")
-            }
+    const {
+        id,
+            name,
+            lastname,
+            email,
+            edad,
+            trabajo } = req.body;
+    
+        try {
+            const formUsuarios = await Usuario.create({
+                id,
+                    name,
+                    lastname,
+                    email,
+                    edad,
+                    trabajo,
+            });
+      
+            res.json(formUsuarios);
+            
+        } catch (err) {
+            res.send("hola, hay un error en otro usuarios")
+        }
 });
 
 module.exports = router;
